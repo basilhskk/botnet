@@ -1,7 +1,10 @@
 
 # Basic Botnet
 
-Botnet framework with c2 and different agents 
+Botnet framework with c2 and different agents
+
+# Disclaimer :
+This project is made for education purposes only. I DO NOT promote or encourage any ILLEGAL activity. How you use this information is your responsibility.
 
 ### Agents Software
 #### TODO : 
