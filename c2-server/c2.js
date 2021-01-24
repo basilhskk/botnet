@@ -60,7 +60,7 @@ app.post('/test', (req, res) => {
 })
   
 // server status infos
-app.get('/server-status', (res) => {
+app.get('/server-status', (req,res) => {
 
   let servStatus = {
     "hostname": os.hostname(),

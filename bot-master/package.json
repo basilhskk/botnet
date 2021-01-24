@@ -1,8 +1,8 @@
 {
-  "name": "adonis-fullstack-app",
+  "name": "botmaster",
   "version": "4.1.0",
   "adonis-version": "4.1.0",
-  "description": "The fullstack application boilerplate for Adonisjs",
+  "description": "The master every bot is going to obey",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
@@ -12,7 +12,7 @@
     "adonisjs",
     "adonis-app"
   ],
-  "author": "",
+  "author": "Vasils K",
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {

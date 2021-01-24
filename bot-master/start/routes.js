@@ -24,50 +24,14 @@ Route.post('recover/:key','Auth/LoginController.recoverLogin')
 
 /* Dashboard Routes */ 
 
+// Route.get('/','DashboardController.show')
 Route.get('dashboard/','DashboardController.show')
 Route.post('dashboard/','DashboardController.recoverLogin')
 
 
-/* Agents Routes aka cnc */ 
+/* c2 Routes */ 
 
-Route.get('register-bot/','DashboardController.show')
-Route.put('register-bot/','c2/RegisterController.registerBot')
-
-/* 
-TODO 
-============
-bot-register 
-
-uid
-os
-user
-group
-
-===============
-bot-beacon 
-
-uid
-os 
-user
-group
-
-==========
-bot-tasks 
-
-uid
-os 
-user
-group
+Route.get('c2/register','c2/RegisterController.show')
+Route.post('register-bot/','c2/RegisterController.register')
 
 
-*/ 
-
-
-
-
-
-/* 
-
-cnc - > relay -> botmaster 
-
-*/
