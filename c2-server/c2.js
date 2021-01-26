@@ -23,7 +23,7 @@ let servStatus = {
 
 }
 
-
+console.log(servStatus)
 axios.put(master+'/c2/register-c2/', servStatus).catch(function (error) {
   // console.log(error);
 

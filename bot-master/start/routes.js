@@ -31,7 +31,7 @@ Route.post('dashboard/','DashboardController.recoverLogin')
 
 /* c2 Routes */ 
 
-Route.get('c2/register','c2/RegisterController.show')
+Route.get('c2/dashboard','c2/DashboardController.show')
 Route.put('c2/register-c2/','c2/RegisterController.registerC2')
 
 

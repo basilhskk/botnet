@@ -8,6 +8,12 @@ class C2Schema extends Schema {
     this.create('c_2_s', (table) => {
       table.increments()
       table.timestamps()
+      table.string("uid").notNullable().unique()
+      table.string("os")
+      table.string("hostname")
+      table.string("ip")
+      table.string("port")
+
     })
   }
 
