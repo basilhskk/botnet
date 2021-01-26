@@ -2,9 +2,11 @@
 
 class RegisterController {
 
-    async registerBot({view,auth,response,request}){
+    async registerC2({view,auth,response,request}){
         console.log("TESt")
         console.log(request.body)
+
+        
         response.status(200)
     }
 

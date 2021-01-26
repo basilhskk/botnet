@@ -5,7 +5,6 @@
 
 const Route = use('Route')
 
-// Route.on('/').render('dashboard')
 
 /* Auth Routes */
 Route.get('login','Auth/LoginController.show')
@@ -25,6 +24,7 @@ Route.post('recover/:key','Auth/LoginController.recoverLogin')
 /* Dashboard Routes */ 
 
 // Route.get('/','DashboardController.show')
+Route.get('/','DashboardController.show')
 Route.get('dashboard/','DashboardController.show')
 Route.post('dashboard/','DashboardController.recoverLogin')
 
@@ -32,6 +32,6 @@ Route.post('dashboard/','DashboardController.recoverLogin')
 /* c2 Routes */ 
 
 Route.get('c2/register','c2/RegisterController.show')
-Route.post('register-bot/','c2/RegisterController.register')
+Route.put('c2/register-c2/','c2/RegisterController.registerC2')
 
 
