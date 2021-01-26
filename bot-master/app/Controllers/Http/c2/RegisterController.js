@@ -19,7 +19,7 @@ class RegisterController {
             
             await newC2.save()
 
-            response.status(200)
+            response.status(200).send("Ok!")
 
         } catch (error) {
 
