@@ -15,6 +15,7 @@ class RegisterController {
         newC2.ip = Helper.sanitizer(request.input('ip'))
         newC2.port = Helper.sanitizer(request.input('port'))
 
+        console.log(newC2.toJSON())
         try {
             
             await newC2.save()

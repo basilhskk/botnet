@@ -26,12 +26,14 @@ Route.post('recover/:key','Auth/LoginController.recoverLogin')
 // Route.get('/','DashboardController.show')
 Route.get('/','DashboardController.show')
 Route.get('dashboard/','DashboardController.show')
-Route.post('dashboard/','DashboardController.recoverLogin')
 
 
 /* c2 Routes */ 
 
 Route.get('c2/dashboard','c2/DashboardController.show')
+
+Route.get('c2/server/:id','c2/DashboardController.show')
+
 Route.put('c2/register-c2/','c2/RegisterController.registerC2')
 
 

